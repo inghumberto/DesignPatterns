@@ -6,16 +6,16 @@ public final class Singlenton {
 
     private Singlenton(String value) {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         this.value = value;
     }
 
-    public Singlenton getInstance(String value){
+    public static Singlenton getInstance(String value){
         if (instance==null){
-            new Singlenton(value);
+            instance= new Singlenton(value);
         }
         return instance;
     }

@@ -1,22 +1,27 @@
 package com.desingpatterns.infrastructure.adapters.in;
 
-import com.desingpatterns.application.ISinglentonService;
+import com.desingpatterns.application.ISinglenton;
 import com.desingpatterns.domains.patterns.creational.Singlenton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
-@RequestMapping("singlenton")
+@ComponentScan
+@RequestMapping("/singlenton")
 public class SinglentonController {
     Logger logger= LoggerFactory.getLogger(SinglentonController.class);
     @Autowired
-    ISinglentonService singlentonService;
+    ISinglenton singlentonService;
     @GetMapping("/{value}")
-    public void getSinglenton(@PathVariable("value") String value){
-        singlentonService.getSinglentonInformation(value);
+    @ResponseStatus(HttpStatus.OK)
+    public ArrayList<Singlenton> getSinglenton(@PathVariable String value){
+        return singlentonService.getSinglentonInformation(value);
     }
 
 }
