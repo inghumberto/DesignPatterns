@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "3ff5ac3c-8a4d-4a98-bac0-60841e5454a6",
+		"name": "PatternsCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5625100"
+	},
+	"item": [
+		{
+			"name": "CreationalPatterns",
+			"item": [
+				{
+					"name": "Singlenton",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/desing-patterns/singlenton/CARACAS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desing-patterns",
+								"singlenton",
+								"CARACAS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prototype",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Caracas\",\r\n    \"price\": \"10.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/desing-patterns/printer/make-copy?quantity=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desing-patterns",
+								"printer",
+								"make-copy"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Builder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 2,\r\n  \"hasGarden\": \"true\",\r\n  \"hasGarage\": \"true\",\r\n  \"hasSwimmingPool\": \"false\",\r\n  \"hasFireplace\": \"true\",\r\n  \"hasBasement\": \"false\",\r\n  \"hasAttic\": \"true\",\r\n  \"hasSolarPanels\": \"false\",\r\n  \"address\": \"123 Main St\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/desing-patterns/builder/make-house",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"desing-patterns",
+								"builder",
+								"make-house"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
