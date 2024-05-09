@@ -13,5 +13,10 @@ Design patterns are divided into three categories:
 3. **Behavioral Patterns** (behavioral design patterns): These patterns define the interactions between objects. They identify common communication patterns between objects and realize these patterns. Examples of behavioral patterns include Observer, State, Strategy, Template Method, Command, Iterator, and Mediator.
 
 Each pattern has its own directory with a detailed implementation and readme file.
+## Running the Application
+1. Build the Docker image by running `docker-compose build` in the terminal.
+2. Start the application by running `docker-compose up` in the terminal.
+
+The application will be accessible at http://localhost:9090/design-patterns.
 
 Please note that Spring Boot 3 is not released yet, so the actual implementation may vary based on the final release.
