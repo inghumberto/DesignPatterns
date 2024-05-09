@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  desing-patterns-app:
+    container_name: "desing-patterns-app"
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "9090:8080"
+    #depends_on:
+    #  - database
+
+  #database:
+  #  image: mysql:latest
+  #  ports:
+  #    - "3306:3306"
+  #  environment:
+  #    - MYSQL_ROOT_PASSWORD=root
+  #    - MYSQL_DATABASE=my_database
+  #  volumes:
+  #    - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
